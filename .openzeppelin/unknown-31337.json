@@ -1,0 +1,170 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+    "txHash": "0x8cf46f6bced513aeb0d5dcaebe115ae3cc3f106c44ba26ff9e685442069a88dc"
+  },
+  "proxies": [
+    {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "txHash": "0x496b455959c95f122e1028ed9bea7f20bebf157a05efeb9e57c7593bdb0de0a2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+      "txHash": "0x9bb89358b6ed3343167652f16d38aab94142aca80b8aecec88a3f26df0d980d0",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "txHash": "0xc50be0ca5d8026d40d5d5015934be6eafe1be7154c38768587f850fee46274da",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82",
+      "txHash": "0xd0598534a58e6fe8ea40275acad826ad7ff5a83376947234dbb581c4380fc000",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xc6e7DF5E7b4f2A278906862b61205850344D4e7d",
+      "txHash": "0xb50983e5acbb1581821d0524c57dcd68cfd67e9e724ea2c23d44b6003cdf60cb",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "00061b7a79aac34717eb84f9c04d3f19734e3055c3ceed87b7504ae7047dcc09": {
+      "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "txHash": "0x876c8798b0cee81dde382b92dcb626d279555c592800f6ae40878ccc8f322dad",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:39"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:44"
+          },
+          {
+            "label": "nftCollection",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_contract(IERC721)363",
+            "contract": "MarketPlace",
+            "src": "contracts\\NftMarket.sol:62"
+          },
+          {
+            "label": "nftAddress",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address",
+            "contract": "MarketPlace",
+            "src": "contracts\\NftMarket.sol:63"
+          },
+          {
+            "label": "Auctions",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_uint256,t_struct(Auc)428_storage)",
+            "contract": "MarketPlace",
+            "src": "contracts\\NftMarket.sol:65"
+          },
+          {
+            "label": "toPay",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "MarketPlace",
+            "src": "contracts\\NftMarket.sol:67"
+          },
+          {
+            "label": "instantPrice",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MarketPlace",
+            "src": "contracts\\NftMarket.sol:68"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC721)363": {
+            "label": "contract IERC721",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Auc)428_storage)": {
+            "label": "mapping(uint256 => struct MarketPlace.Auc)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auc)428_storage": {
+            "label": "struct MarketPlace.Auc",
+            "members": [
+              {
+                "label": "creator",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "endAt",
+                "type": "t_uint32",
+                "offset": 20,
+                "slot": "0"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "startingBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "pendingReturns",
+                "type": "t_mapping(t_address,t_uint256)",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint32": {
+            "label": "uint32",
+            "numberOfBytes": "4"
+          }
+        }
+      }
+    }
+  }
+}
